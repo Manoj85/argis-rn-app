@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import Constants  from 'expo-constants'
 import MapWebView from "./components/MapWebView";
+import { white, purple } from './utils/colors'
 
 // @ts-ignore
 const AppStatusBar = ({backgroundColor, ...props}) => {
@@ -14,7 +15,10 @@ const AppStatusBar = ({backgroundColor, ...props}) => {
 
 export default function App() {
   return (
-    <MapWebView />
+    <>
+      <AppStatusBar backgroundColor={purple} barStyle='light-content' />
+      <MapWebView />
+    </>
   );
 }
 
